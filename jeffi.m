@@ -1,4 +1,4 @@
-function [ mean, lowerbound, upperbound ] = jeffi( x, n, alpha, deci )
+function [ outputmat ] = jeffi( x, n, alpha, deci )
 %Jeffi calculates the confidence interval of a given alpha from the data
 %set. Results are expressed in any number of decimal places. Default is 95%
 %confidence interval in 3 decimals.
@@ -47,6 +47,9 @@ end
 disp(['Mean: ', num2str(mean)])
 disp(['Lower bound: ', num2str(lowerbound)])
 disp(['Upper bound: ', num2str(upperbound)])
+
+% Show a vector for copying
+outputmat = [mean;upperbound;lowerbound];
 
 end
 
