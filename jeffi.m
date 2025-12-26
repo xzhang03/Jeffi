@@ -17,6 +17,12 @@ if nargin < 3
     alpha = 0.05;
 end
 
+% Alternatively express input as 0s and 1s
+if nargin < 2
+    n = length(x);
+    x = sum(x > 0.5);
+end
+
 % Calculate the mean
 mean = round(x/n, deci);
 
